@@ -1,0 +1,124 @@
+/* Title */
+header {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+header h1 {
+    position: relative;
+    display: block;
+    font-size: 3vw;
+    animation-name: apear;
+    animation-duration: 2s;
+}
+
+/* Text */
+main {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7.5vh;
+    width: 45vw;
+    min-width: 250px;
+    margin-bottom: 150px;
+}
+
+main form {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--black);
+    border-radius: 5px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px 20px var(--white);
+    padding: 1vw;
+    box-sizing: border-box;
+    animation-name: formApear;
+    animation-duration: 2s;
+}
+
+main form label {
+    position: relative;
+    display: block;
+    font-size: 1.5vw;
+}
+
+main form input {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 1vw;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+main form textarea {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 1vw;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    resize: none;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+main form input:focus, main form input:hover, main form textarea:focus, main form textarea:hover {
+    border: 2px solid var(--orange);
+}
+
+main form input[type="submit"] {
+    position: relative;
+    display: block;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    min-width: 100px;
+    font-size: 20px;
+}
+
+main form input[type="submit"]:hover, main form input[type="submit"]:focus {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+@keyframes formApear {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Resize */
+@media screen and (max-width: 1150px) {
+    main form {
+        padding: 15px;
+    }
+    header h1 {
+        font-size: 35px;
+    }
+    main form label {
+        font-size: 25px;
+    }
+    main form input, main form textarea {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/contact.css">
+    <script src="./public/js/rainParticle.js" defer></script>
+    <script src="./public/js/transition.js" defer></script>
+    <script src="./public/js/textArea.js" defer></script>
+    <title>Hugo Wendjaneh</title>
+</head>
+
+<body>
+
+    <div class="transitionIn"></div>
+    <div class="transitionOut" id="transitionOut"></div>
+
+    <canvas id="canvas"></canvas>
+
+    <header>
+        <h1>Contact me</h1>
+    </header>
+
+    <main>
+        <form action="" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="firstName">First name</label>
+                <input type="text" name="firstName">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea name="message" is="textarea-autogrow"></textarea>
+            </div>
+            <input type="submit">
+        </form>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./skills.html">Skills</a>
+            <a href="">Study</a>
+            <a href="./contact.html" class="selected">Contact</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/* Text */
+main {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 20vh;
+    width: 90vw;
+    margin-bottom: 150px;
+}
+
+main h1 {
+    position: relative;
+    display: block;
+    font-size: 3vw;
+    animation-name: apear;
+    animation-duration: 2s;
+}
+
+main h2 {
+    position: relative;
+    display: block;
+    font-size: 2vw;
+    color: var(--grey);
+    margin-top: 10px;
+    animation-name: apear;
+    animation-duration: 2s;
+}
+
+main p {
+    position: relative;
+    display: block;
+    font-size: 1vw;
+    color: var(--black);
+    margin-top: 6vh;
+    animation-name: apear;
+    animation-duration: 2s;
+}
+
+/* Link */
+main div {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vw;
+}
+
+main a {
+    position: relative;
+    display: block;
+    font-size: 2vw;
+    margin-top: 10vh;
+    padding: 10px;
+    animation-name: apear;
+    animation-duration: 2s;
+}
+
+main a::after {
+    content: "";
+    background: var(--orange);
+    width: 30%;
+    mix-blend-mode: color-burn;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+main a:hover, main a:focus {
+    color: var(--white);
+}
+
+main a:hover::after, main a:focus::after {
+	height: 100%;
+    width: 100%;
+}
+
+/* Resize */
+@media screen and (max-width: 1150px) {
+    main h1 {
+        font-size: 35px;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    main a {
+        font-size: 20px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
+    main div {
+        width: 50vw;
+    }
+
+}
