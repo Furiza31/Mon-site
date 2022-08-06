@@ -32,7 +32,9 @@ a {
     text-decoration: none;
 }
 
+
 /* Footer */
+
 footer {
     position: fixed;
     display: flex;
@@ -52,7 +54,7 @@ footer nav {
     background-color: var(--black);
     height: fit-content;
     border-radius: 5px;
-    width: 250px;
+    width: fit-content;
     align-items: stretch;
     animation-name: apear;
     animation-duration: 2s;
@@ -84,7 +86,9 @@ footer nav a.selected::after {
     width: 100%;
 }
 
+
 /* Apear animation */
+
 @keyframes apear {
     0% {
         transform: translateY(-100%);
@@ -100,7 +104,9 @@ footer nav a.selected::after {
     }
 }
 
+
 /* Transition */
+
 div.transitionIn {
     position: fixed;
     display: block;
@@ -132,7 +138,9 @@ div.transitionOut {
     }
 }
 
+
 /* rainParticle */
+
 canvas {
     position: fixed;
     display: block;
@@ -142,19 +150,36 @@ canvas {
     top: 0px;
 }
 
+
 /* Custom scroll bar */
+
+
 /* width */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
     background: transparent;
 }
-  
+
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: var(--orange);
     border-radius: 3px;
+}
+
+
+/* Resize */
+
+@media screen and (max-width: 1150px) {
+    footer nav a {
+        font-size: 15px;
+    }
 }
