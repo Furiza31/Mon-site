@@ -15,18 +15,19 @@ let animation = null;
 
 // Debouce function for resize event
 function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
+    var timeout;
+    return function() {
+        var context = this,
+            args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
 };
 
 var resize = debounce(function() {
@@ -47,16 +48,16 @@ class Particle {
         this.lineHeight = 30;
         this.x = Math.random() * container.width;
         this.y = Math.random() * container.height;
-        this.vy = Math.random() + 0.1;
+        this.vy = Math.random() * (0.3 - 0.1) + 0.1;
         this.radius = Math.random() * 2 + 3;
-        this.color = colors[i%5];
+        this.color = colors[i % 5];
     }
     update() {
         this.y += this.vy;
         if (this.y - this.radius - this.lineHeight > container.height) {
             this.y = 0
             this.x = Math.random() * container.width;
-            this.vy = Math.random() + 0.1;
+            this.vy = Math.random() * (0.3 - 0.1) + 0.1;
         }
     }
     draw() {
@@ -81,7 +82,7 @@ class Particle {
 }
 
 // Create the particles
-function createParticle () {
+function createParticle() {
     for (let i = 0; i < nbParticles; i++) {
         particles.push(new Particle(i));
     }
@@ -98,4 +99,3 @@ function draw() {
     animation = requestAnimationFrame(draw);
 }
 draw();
-
