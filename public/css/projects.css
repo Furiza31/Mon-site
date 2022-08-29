@@ -1,0 +1,16 @@
+/* Title */
+
+header {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+header h1 {
+    position: relative;
+    display: block;
+    font-size: 3vw;
+    animation-name: apear;
+    animation-duration: 2s;
+}
